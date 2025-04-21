@@ -26,7 +26,7 @@ Technology Used:--------------------------
 • System Used: OS: Windows 10 Pro, RAM: 8GB, Processor: i5 2400 (2nd Gen) 
 
 
-Launch the App:---------------------------
+How to Launch the App:---------------------------
 
 To launch the app, open it with intellij idea IDE then go to: QuizApp \ src \ main \ java \ javafx_app \ quizapp \StartApp.java
 and run this “StartApp.java” file.
