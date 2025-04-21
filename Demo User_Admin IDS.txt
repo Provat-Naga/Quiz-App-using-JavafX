@@ -1,0 +1,13 @@
+User IDS                            Passwords
+-----------------------------------------------------
+amrit97@gmail.com               |   amrit97@gmail.com
+aananyat97@gmail.com            |   Aananya@Tiwari
+snehabose@outlook.in            |   @Snehabose123
+provat25@gmail.com              |   ProvatNaga@123
+mondal.avijit@yahoomail.com     |   Mondal@avijit
+demo@user.com                   |   demo@user.com
+
+Admin IDS                            Passwords
+-----------------------------------------------------
+provat.naga@gmail.com           |   provat321
+sneha.bose@yahoo.com            |   sneha2001

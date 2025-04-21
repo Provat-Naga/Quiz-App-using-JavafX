@@ -1,0 +1,182 @@
+/* Top Bar Styles */
+#topBar {
+    -fx-padding: 10;
+    -fx-background-color: #007acc;
+}
+
+#dashboardLabel {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+/* General button styling */
+#logoutButton, #backButton {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15 5 15;
+    -fx-background-radius: 20;
+}
+#logoutButton:hover, #backButton:hover, .hide-btn:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.3, 0, 4);
+    -fx-cursor: hand;
+}
+#backButton {
+    -fx-background-color: linear-gradient(to right, #e67e22, #f39c12, #f5dc9a);
+}
+#backButton:hover {
+    -fx-background-color: linear-gradient(to right, #f5dc9a, #f39c12, #e67e22);
+}
+
+#logoutButton {
+    -fx-background-color: linear-gradient(to right, #e83e8c, #f06292, #f8bbd0);
+}
+#logoutButton:hover {
+    -fx-background-color: linear-gradient(to right, #f8bbd0, #f06292, #e83e8c);
+}
+
+#logoutButton:pressed, #backButton:pressed {
+    -fx-translate-y: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0.3, 0, 2);
+}
+.hide-btn {
+    -fx-background-color: linear-gradient(to right, #00BFFF, #1E90FF);
+}
+.hide-btn:hover {
+    -fx-background-color: linear-gradient(to right, #1E90FF, #00BFFF);
+}
+
+/* Scroll Pane */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+/* TilePane inside ScrollPane */
+.tile-pane, .card-tile-pane {
+    -fx-padding: 10;
+}
+
+/* Optional card container */
+#cardContainer {
+    -fx-padding: 20;
+}
+
+/* Detail View Container */
+#detailsContainer {
+    -fx-padding: 20;
+    -fx-background-color: #ecf0f1;
+}
+
+.details-header {
+    -fx-padding: 10;
+}
+
+.question-detail-box {
+    -fx-padding: 10;
+}
+
+#questionDetailBox .question-box {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5;
+}
+
+
+/* Hide Details Button */
+#hideDetailsButton {
+    -fx-background-color: linear-gradient(to right, #00BFFF, #1E90FF);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-padding: 6 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);
+}
+
+#hideDetailsButton:hover {
+    -fx-background-color: linear-gradient(to right, #1E90FF, #00BFFF);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.3, 0, 4);
+    -fx-cursor: hand;
+}
+#hideDetailsButton:pressed {
+    -fx-translate-y: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0.3, 0, 2);
+}
+
+/* Wrapping for all labels */
+.label {
+    -fx-wrap-text: true;
+    -fx-font-family: 'Segoe UI';
+}
+.card-tile-pane {
+    -fx-alignment: center;
+    -fx-padding: 20;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-pref-width: Infinity;
+    /* Force the pane to take all horizontal space for centering */
+}
+.quiz-card {
+    -fx-background-color: white;
+    -fx-font-family: 'Segoe UI';
+    -fx-background-color: #F8FBF8;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 2, 2);
+    -fx-pref-width: 235;
+    -fx-pref-height: 235;
+    -fx-cursor: hand;
+}
+.quiz-card:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-background-color: #edf2fa;
+}
+.dtail {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #388E3C, #4CAF50, #81C784);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+.dtail:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.3, 0, 4);
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #81C784, #4CAF50, #388E3C);
+}
+.dtail:pressed {
+    -fx-translate-y: 1.03px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0.3, 0, 2);
+}
+
+.tilabel {
+    -fx-font-size: 18px;
+    -fx-text-fill: #e67e22;
+    -fx-font-weight: bold;
+}
+.all-inOne {
+    -fx-text-wrap: true;
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.drag-handle {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 5px;
+    -fx-cursor: move;
+    -fx-border-radius: 5px 5px 0 0;
+}
+
+.drag-text {
+    -fx-text-fill: #555;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/17.0.12"
+           fx:controller="javafx_app.quizapp.MyProgressController"
+           stylesheets="@css/myprogress.css"
+           prefWidth="900.0" prefHeight="710.0">
+
+    <!-- Main layout inside BorderPane -->
+    <BorderPane fx:id="mainLayout" prefHeight="710.0" prefWidth="900.0">
+
+        <!-- Top Bar -->
+        <top>
+            <HBox fx:id="topBar" spacing="20" styleClass="top-bar">
+                <Label fx:id="dashboardLabel" text="User's Dashboard"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Button fx:id="backButton" onAction="#handleBack" text="← Back"/>
+                <Button fx:id="logoutButton" onAction="#handleLogout" text="← Logout"/>
+            </HBox>
+        </top>
+
+        <!-- Scrollable Card List -->
+        <center>
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+                <TilePane fx:id="attemptsTilePane" hgap="15" vgap="15" prefColumns="3" prefTileWidth="220"
+                          styleClass="card-tile-pane"/>
+            </ScrollPane>
+        </center>
+    </BorderPane>
+
+    <!-- Draggable Details Box FLOATING -->
+    <VBox fx:id="detailsBox" visible="false" managed="false"
+          spacing="10" prefHeight="250" maxHeight="500" minHeight="150"
+          translateY="400"
+          StackPane.alignment="BOTTOM_CENTER"
+          style="-fx-background-color: white; -fx-border-color: #dcdcdc; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.3, 0, -1);">
+
+        <!-- Drag Handle -->
+        <HBox fx:id="dragHandle" alignment="CENTER" styleClass="drag-handle">
+            <Label text="⇡ Drag up for more" styleClass="drag-text"/>
+        </HBox>
+
+        <!-- Header with hide button -->
+        <HBox spacing="10" styleClass="details-header">
+            <Label fx:id="quizTitleLabel" text="Quiz Details" styleClass="tilabel"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="hideDetailsButton" onAction="#handleHideDetails" text="Hide ↓" styleClass="hide-btn"/>
+        </HBox>
+
+        <!-- Scrollable content -->
+        <ScrollPane fitToHeight="true" fitToWidth="true">
+            <VBox fx:id="questionDetailBox" spacing="10"/>
+        </ScrollPane>
+    </VBox>
+</StackPane>

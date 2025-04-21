@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="resultPane" prefHeight="450.0" prefWidth="450.0"
+            style="-fx-background-color: #F8F8FF;" stylesheets="@css/Result.css" xmlns="http://javafx.com/javafx/17.0.12"
+            fx:controller="javafx_app.quizapp.ResultController">
+
+    <VBox fx:id="resultPaneVBox" alignment="CENTER" spacing="30" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- User Info Section -->
+        <HBox alignment="CENTER" spacing="20">
+            <ImageView fx:id="userImage" fitHeight="100" fitWidth="100"
+                       style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0.3, 2, 2);"/>
+
+            <VBox alignment="CENTER_LEFT" spacing="8">
+                <Text fx:id="userName" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+                <Text fx:id="score" style="-fx-font-size: 14px;"/>
+                <Text fx:id="totalQuestions" style="-fx-font-size: 14px;"/>
+                <Text fx:id="not_attemptedQuestions" style="-fx-font-size: 14px;"/>
+                <Text fx:id="correctQuestions" style="-fx-font-size: 14px; -fx-fill: green;"/>
+                <Text fx:id="wrongQuestions" style="-fx-font-size: 14px; -fx-fill: red;"/>
+                <Text fx:id="time_taken" style="-fx-font-size: 14px;"/>
+            </VBox>
+        </HBox>
+
+        <!-- Back Button -->
+        <Button fx:id="backButton" styleClass="back-button" text="← Back to User Panel"/>
+    </VBox>
+
+</AnchorPane>

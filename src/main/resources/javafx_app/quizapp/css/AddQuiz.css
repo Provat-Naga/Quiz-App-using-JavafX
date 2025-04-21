@@ -1,0 +1,99 @@
+/* Input fields styling: TextField, TextArea, PasswordField */
+.input-field, .text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-color: #007acc;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+    -fx-padding: 0 10 0 10;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #333;
+    -fx-prompt-text-fill: #999;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.03), 2, 0, 0, 1);
+    -fx-pref-width: 400;
+    -fx-pref-height: 35px;
+    -fx-min-height: 35px;
+    -fx-max-height: 35px;
+}
+
+/* Shared button style properties */
+.button {
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15;
+    -fx-pref-width: 130;
+    -fx-pref-height: 42;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+    -fx-font-size: 12.5px;
+}
+.button:hover {
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.3, 0, 4);
+}
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Skyblue Button */
+.btn-skyblue {
+    -fx-background-color: linear-gradient(to right, #1E90FF, #00BFFF);
+}
+.btn-skyblue:hover {
+    -fx-background-color: linear-gradient(to right, #00BFFF, #1E90FF);
+}
+
+/* Orange Button */
+.btn-orange {
+    -fx-background-color: linear-gradient(to right, #e67e22, #f39c12, #f5dc9a);
+}
+.btn-orange:hover {
+    -fx-background-color: linear-gradient(to right, #f5dc9a, #f39c12, #e67e22);
+}
+
+/* Pink Button */
+.btn-pink {
+    -fx-background-color: linear-gradient(to right, #e83e8c, #f06292, #f8bbd0);
+}
+.btn-pink:hover {
+    -fx-background-color: linear-gradient(to right, #f8bbd0, #f06292, #e83e8c);
+}
+
+/* Green Button */
+.btn-green {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #388E3C, #4CAF50, #81C784);
+}
+.btn-green:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #81C784, #4CAF50, #388E3C);
+}
+
+/* Make RadioButton text bold */
+.radio-button {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+/* Style for all labels */
+.label {
+    -fx-font-family: "Quicksand", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+.heading-label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.input_question-area {
+
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-color: #007acc;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+}

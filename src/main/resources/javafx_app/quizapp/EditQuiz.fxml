@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:id="stackPane" prefHeight="600" prefWidth="750"
+           stylesheets="@css/editQuiz.css" xmlns="http://javafx.com/javafx/17.0.12"
+           fx:controller="javafx_app.quizapp.EditQuizController">
+
+    <VBox alignment="TOP_LEFT" maxWidth="600" spacing="10">
+        <!-- Heading on Top Left -->
+        <Label styleClass="heading-label" text="Edit / Delete Quiz">
+            <VBox.margin>
+                <Insets bottom="0" left="20" top="20"/>
+            </VBox.margin>
+        </Label>
+
+        <!-- Push the rest of the form slightly down using padding -->
+        <VBox alignment="CENTER" spacing="20">
+            <VBox.margin>
+                <Insets top="20"/>
+            </VBox.margin>
+
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="form-label" text="Select Quiz:"/>
+                <ComboBox fx:id="quizComboBox" prefWidth="280" styleClass="styled-combo"/>
+                <Label fx:id="questionCounterLabel" styleClass="counter-label" text="Question 0">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+
+            <VBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="form-label" text="Quiz Title:"/>
+                <TextField fx:id="quizTitleField" prefWidth="400" promptText="Enter Quiz Title"
+                           styleClass="styled-text"/>
+
+                <Label styleClass="form-label" text="Question:"/>
+                <TextArea fx:id="questionField" prefHeight="80" prefWidth="400" promptText="Enter Question"
+                          styleClass="styled-textarea"/>
+
+                <Label styleClass="form-label" text="Options:"/>
+                <TextField fx:id="option1Field" prefWidth="400" promptText="Option 1" styleClass="styled-text"/>
+                <TextField fx:id="option2Field" prefWidth="400" promptText="Option 2" styleClass="styled-text"/>
+                <TextField fx:id="option3Field" prefWidth="400" promptText="Option 3" styleClass="styled-text"/>
+                <TextField fx:id="option4Field" prefWidth="400" promptText="Option 4" styleClass="styled-text"/>
+
+                <Label styleClass="form-label" text="Correct Answer:"/>
+                <HBox alignment="CENTER_LEFT" spacing="15">
+                    <RadioButton fx:id="option1Radio" styleClass="styled-radio" text="Option 1"/>
+                    <RadioButton fx:id="option2Radio" styleClass="styled-radio" text="Option 2"/>
+                    <RadioButton fx:id="option3Radio" styleClass="styled-radio" text="Option 3"/>
+                    <RadioButton fx:id="option4Radio" styleClass="styled-radio" text="Option 4"/>
+                </HBox>
+            </VBox>
+
+            <!-- Buttons in Two Rows with Increased Spacing -->
+            <VBox alignment="CENTER" spacing="15">
+                <HBox alignment="CENTER" spacing="15">
+                    <Button fx:id="previousButton" styleClass="nav-btn" text="← Previous"/>
+                    <Button fx:id="saveButton" styleClass="orange-button" text="💾 Save"/>
+                    <Button fx:id="nextButton" styleClass="nav-btn" text="Next →"/>
+
+
+                </HBox>
+                <HBox alignment="CENTER" spacing="15">
+                    <Button fx:id="deleteButton" styleClass="red-button" text="✖ Delete Question"/>
+                    <Button fx:id="deleteQuizButton" prefWidth="130" styleClass="red-button" text="✖ Delete Quiz"/>
+                    <Button fx:id="doneButton" onAction="#returnToAdminPanel" styleClass="cancel-button" text="✓ Done"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </VBox>
+</StackPane>

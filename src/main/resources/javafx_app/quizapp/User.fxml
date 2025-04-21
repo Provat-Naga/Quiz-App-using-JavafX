@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f8f8ff;"
+            stylesheets="@css/User.css" xmlns="http://javafx.com/javafx/17.0.12"
+            fx:controller="javafx_app.quizapp.UserController">
+
+    <children>
+        <HBox prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f8f8ff;">
+
+            <!-- Left Panel -->
+            <VBox alignment="CENTER" prefWidth="400.0"
+                  style="-fx-background-color: linear-gradient(to bottom, #008fff, #006bb3);">
+                <ImageView fitHeight="140.0" fitWidth="159.0" layoutX="126.0" layoutY="245.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../../img/quiz.png"/>
+                    </image>
+                </ImageView>
+                <Label text="Quiz App" textFill="#f5f5f5">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="28.0"/>
+                    </font>
+                </Label>
+            </VBox>
+
+            <!-- Right Panel -->
+            <AnchorPane fx:id="anchorPaneuser" prefWidth="500.0"
+                        style="-fx-background-color: #ecf0f1; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 0);">
+                <children>
+                    <ImageView fx:id="gifview" fitHeight="86.0" fitWidth="91.0" layoutX="192.0" layoutY="13.0"
+                               pickOnBounds="true" preserveRatio="true"/>
+
+                    <Label layoutX="190.0" layoutY="121.0" text="User Login" textFill="#008fff">
+                        <font>
+                            <Font name="Segoe UI Semibold" size="20.0"/>
+                        </font>
+                    </Label>
+
+                    <Label layoutX="100.0" layoutY="175.0" text="Username" textFill="#008fff">
+                        <font>
+                            <Font name="Segoe UI Semibold" size="18.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="uid" layoutX="100.0" layoutY="210.0" prefHeight="36.0" prefWidth="300.0"
+                               promptText="Enter your username" style="-fx-background-radius: 8;"/>
+
+                    <Label layoutX="100.0" layoutY="262.0" text="Password" textFill="#008fff">
+                        <font>
+                            <Font name="Segoe UI Semibold" size="18.0"/>
+                        </font>
+                    </Label>
+                    <StackPane layoutX="100.0" layoutY="295.0" prefHeight="36.0" prefWidth="300.0">
+                        <TextField fx:id="visiblePass" managed="false" prefHeight="36.0" prefWidth="300.0"
+                                   promptText="Enter your password" style="-fx-background-radius: 8;" visible="false"/>
+                        <PasswordField fx:id="upass" prefHeight="36.0" prefWidth="300.0"
+                                       promptText="Enter your password" style="-fx-background-radius: 8;"/>
+                        <Button fx:id="togglePassword" alignment="CENTER_RIGHT" onAction="#togglePasswordVisibility"
+                                prefHeight="36.0" prefWidth="36.0" styleClass="eye-button" text="👁"
+                                StackPane.alignment="CENTER_RIGHT"/>
+                    </StackPane>
+
+
+                    <Button fx:id="userLogin" layoutX="100.0" layoutY="350.0" onAction="#userLoginMethod"
+                            prefHeight="40.0" prefWidth="300.0" styleClass="login-btn" text="Login →">
+
+                    </Button>
+
+                    <Line endX="300.0" fill="#7393b3" layoutX="100.0" layoutY="410.0" stroke="#d3d3d3"
+                          strokeWidth="0.7"/>
+
+                    <Label alignment="CENTER" layoutX="90.0" layoutY="430.0" prefHeight="34.0" prefWidth="121.0"
+                           text="Not a user yet?" textFill="#e34234" underline="true">
+                        <font>
+                            <Font name="Arial Narrow Bold" size="16.0"/>
+                        </font>
+                    </Label>
+
+                    <Button fx:id="userRegister" layoutX="230.0" layoutY="430.0" onAction="#callUserRegistration"
+                            prefHeight="34.0" prefWidth="170.0" styleClass="userReg-btn" text="Register Now →"
+                            textFill="white">
+                    </Button>
+
+                    <Line endX="300.0" layoutX="100.0" layoutY="490.0" stroke="#7393b3" strokeWidth="0.5"/>
+
+                    <Button fx:id="adminLoginBtn" layoutX="100.0" layoutY="510.0" onAction="#callAdminLogin"
+                            prefHeight="40.0" prefWidth="300.0" styleClass="admin-btn" text="Admin Login →">
+                    </Button>
+                </children>
+            </AnchorPane>
+        </HBox>
+    </children>
+</AnchorPane>

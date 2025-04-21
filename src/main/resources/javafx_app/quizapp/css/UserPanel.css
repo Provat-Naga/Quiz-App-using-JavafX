@@ -1,0 +1,102 @@
+.header-bar {
+    -fx-padding: 10px 20px;
+    -fx-background-color: #007acc;
+}
+
+.greeting {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.progress-btn, .logout-btn, .leader-btn {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15 5 15;
+    -fx-background-radius: 20;
+
+}
+
+.logout-btn:hover, .progress-btn:hover, .leader-btn {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.3, 0, 4);
+    -fx-cursor: hand;
+}
+.logout-btn {
+    -fx-background-color: linear-gradient(to right, #e83e8c, #f06292, #f8bbd0);
+}
+.logout-btn:hover {
+    -fx-background-color: linear-gradient(to right, #f8bbd0, #f06292, #e83e8c);
+}
+
+.progress-btn {
+    -fx-background-color: linear-gradient(to right, #e67e22, #f39c12, #f5dc9a);
+}
+.progress-btn:hover {
+    -fx-background-color: linear-gradient(to right, #f5dc9a, #f39c12, #e67e22);
+}
+.leader-btn {
+    -fx-background-color: linear-gradient(to right, #041E42, #0A2F6B, #13407F, #1F52A0);
+}
+.leader-btn:hover {
+    -fx-background-color: linear-gradient(to right, #1F52A0, #13407F, #0A2F6B, #041E42);
+}
+
+
+/*  Added for start button */
+.start-btn {
+    -fx-background-color: linear-gradient(to right, #1E90FF, #00BFFF);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+.start-btn:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.3, 0, 4);
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(to right, #00BFFF, #1E90FF);
+}
+.start-btn:pressed, .progress-btn:pressed, .logout-btn:pressed, .leader-btn:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+#cardContainer {
+    -fx-padding: 10px;
+    -fx-background-color: #f5f5f5;
+}
+
+.quiz-card {
+    -fx-pref-width: 200;
+    -fx-pref-height: 150;
+    -fx-background-color: #F8FBF8;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 2, 2);
+    -fx-alignment: center;
+    -fx-padding: 10;
+    -fx-cursor: hand;
+
+}
+
+.quiz-card:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-background-color: #edf2fa;
+}
+
+.quiz-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #e67e22;
+    -fx-font-weight: bold;
+
+}
+
+/*  Added for question count text */
+.quiz-count {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+    -fx-font-family: "Segoe UI Semibold";
+}

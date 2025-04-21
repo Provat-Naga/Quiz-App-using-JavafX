@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            prefHeight="550.0"
+            fx:controller="javafx_app.quizapp.LeaderboardController"
+            stylesheets="@css/Leaderboard.css">
+
+    <VBox alignment="TOP_CENTER" spacing="20"
+
+          AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20"
+          AnchorPane.topAnchor="20"
+          AnchorPane.bottomAnchor="20">
+
+        <!-- Header -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label styleClass="led" text="🏆Leaderboard"/>
+            <ComboBox fx:id="quizSelector" prefWidth="250"/>
+        </HBox>
+
+        <!-- Scrollable Table -->
+        <TableView fx:id="leaderboardTable"
+                   VBox.vgrow="ALWAYS"
+                   style="-fx-border-color: #ccc; -fx-border-radius: 8px;">
+            <columns>
+                <TableColumn fx:id="rankColumn" prefWidth="75" text="Rank"/>
+                <TableColumn fx:id="nameColumn" prefWidth="250" text="Name"/>
+                <TableColumn fx:id="scoreColumn" prefWidth="100" text="Score"/>
+            </columns>
+        </TableView>
+
+        <!-- Back Button -->
+        <Button fx:id="backButton" maxWidth="200" onAction="#handleBackToUserPanel"
+                styleClass="bak-btn"
+                text="← Back to User Panel"/>
+    </VBox>
+</AnchorPane>

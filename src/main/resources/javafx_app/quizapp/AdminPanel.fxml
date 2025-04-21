@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="adminPanelRoot" prefHeight="730.0" prefWidth="1000"
+            style="-fx-background-color: #f8f8ff;" stylesheets="@css/adminpanel.css" xmlns="http://javafx.com/javafx/24"
+            fx:controller="javafx_app.quizapp.AdminPanelController">
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox fx:id="sidebar" alignment="CENTER" prefHeight="730.0" prefWidth="250" spacing="20" styleClass="side-bar">
+            <Label styleClass="sidebar-title" text="Admin Panel" textFill="WHITE">
+                <font>
+                    <Font name="Segoe UI Semibold" size="12.0"/>
+                </font>
+            </Label>
+
+            <Button fx:id="btnAddQuiz" prefHeight="40" prefWidth="200" styleClass="btn-skyblue" text="+ Add Quiz"/>
+            <Button fx:id="btnEditDeleteQuiz" prefHeight="40" prefWidth="200" styleClass="btn-orange"
+                    text="📝 Edit/Delete Quiz"/>
+            <Button fx:id="btnLogout" onAction="#handleLogout" prefHeight="40" prefWidth="200" styleClass="btn-rosepink"
+                    text="← Logout"/>
+
+            <!-- Date/Time Label -->
+            <Label fx:id="dateTimeLabel" styleClass="datetime-label" text="Loading..."/>
+        </VBox>
+    </left>
+
+    <!-- CENTER MAIN AREA -->
+    <center>
+        <StackPane fx:id="contentPane" prefHeight="730.0" style="-fx-background-color: #ecf0f1;"
+                   styleClass="main-content">
+            <Label fx:id="adminNameLabel" styleClass="welcome-text" text="Welcome to the Admin Panel!"/>
+        </StackPane>
+    </center>
+
+</BorderPane>

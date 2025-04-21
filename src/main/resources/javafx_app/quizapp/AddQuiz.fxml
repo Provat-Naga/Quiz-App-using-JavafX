@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="quizAnchor" stylesheets="@css/AddQuiz.css"
+            xmlns="http://javafx.com/javafx/17.0.12" fx:controller="javafx_app.quizapp.AddQuizController">
+
+    <children>
+        <VBox fx:id="quizVBox" alignment="TOP_LEFT" prefHeight="680" spacing="10.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <!-- Heading with Label in HBox -->
+            <HBox alignment="BASELINE_LEFT" spacing="20">
+                <Label styleClass="heading-label" text="Create New Quiz">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="22.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="questionCountLabel" text="Questions Added: 0">
+                    <font>
+                        <Font name="Segoe UI" size="14.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets left="10"/>
+                    </HBox.margin>
+                    <style>
+                        -fx-text-fill: #ff9514;
+                        -fx-font-weight: bold;
+                    </style>
+                </Label>
+            </HBox>
+
+            <!-- Quiz Title -->
+            <Label text="Quiz Title">
+                <font>
+                    <Font name="System Bold" size="15.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="titleField" prefHeight="30" prefWidth="400" promptText="Enter Quiz Title"
+                       styleClass="input-field"/>
+            <Button fx:id="okButton" onAction="#handleOK" prefHeight="32" prefWidth="80" styleClass="btn-green"
+                    text="+ Add Title"/>
+
+            <!-- Question -->
+            <Label text="Question">
+                <font>
+                    <Font name="Segoe UI Semibold" size="15.0"/>
+                </font>
+            </Label>
+            <TextArea fx:id="questionField" prefHeight="60" prefWidth="400" promptText="Enter Question"
+                      styleClass="input_question-area" wrapText="true"/>
+
+            <!-- Option 1 -->
+            <Label text="Option 1">
+                <font>
+                    <Font name="Segoe UI Semibold" size="14.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="option1Field" prefHeight="30" prefWidth="400" promptText="Option 1"
+                       styleClass="input-field"/>
+
+            <!-- Option 2 -->
+            <Label text="Option 2">
+                <font>
+                    <Font name="Segoe UI Semibold" size="14.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="option2Field" prefHeight="30" prefWidth="400" promptText="Option 2"
+                       styleClass="input-field"/>
+
+            <!-- Option 3 -->
+            <Label text="Option 3">
+                <font>
+                    <Font name="Segoe UI Semibold" size="14.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="option3Field" prefHeight="30" prefWidth="400" promptText="Option 3"
+                       styleClass="input-field"/>
+
+            <!-- Option 4 -->
+            <Label text="Option 4">
+                <font>
+                    <Font name="Segoe UI Semibold" size="14.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="option4Field" prefHeight="30" prefWidth="400" promptText="Option 4"
+                       styleClass="input-field"/>
+
+            <!-- Correct Answer Selection -->
+            <Label text="Select Correct Answer">
+                <font>
+                    <Font name="Segoe UI Semibold" size="14.0"/>
+                </font>
+            </Label>
+            <HBox spacing="10">
+                <RadioButton fx:id="option1Radio" text="Option 1"/>
+                <RadioButton fx:id="option2Radio" text="Option 2"/>
+                <RadioButton fx:id="option3Radio" text="Option 3"/>
+                <RadioButton fx:id="option4Radio" text="Option 4"/>
+            </HBox>
+
+            <!-- Action Buttons -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <VBox.margin>
+                    <Insets top="8"/>
+                </VBox.margin>
+                <Button fx:id="addAnotherButton" onAction="#handleAddAnother" styleClass="btn-skyblue"
+                        text="+ Add Another"/>
+                <Button fx:id="saveButton" onAction="#handleSave" styleClass="btn-orange" text="💾 Save"/>
+                <Button fx:id="cancelButton" onAction="#handleCancelQuizEntry" styleClass="btn-pink" text="× Cancel"/>
+            </HBox>
+
+        </VBox>
+    </children>
+</AnchorPane>

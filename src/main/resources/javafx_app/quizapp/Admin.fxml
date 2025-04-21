@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="anchorPaneadmin" prefHeight="600.0" prefWidth="900.0"
+            style="-fx-background-color: #f8f8ff;" stylesheets="@css/Admin.css" xmlns="http://javafx.com/javafx/17.0.12"
+            fx:controller="javafx_app.quizapp.AdminController">
+    <children>
+        <!-- Left Green Pane -->
+        <Pane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #041E42;">
+            <children>
+                <ImageView fitHeight="121.0" fitWidth="152.0" layoutX="124.0" layoutY="190.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../img/quiz.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="130.0" layoutY="320.0" text="Quiz App" textAlignment="CENTER" textFill="#f5f5f5">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="28.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+
+        <!-- Right Login Section -->
+        <ImageView fx:id="gifview" fitHeight="95.0" fitWidth="105.0" layoutX="594.0" layoutY="20.0" pickOnBounds="true"
+                   preserveRatio="true"/>
+
+        <Label layoutX="594.0" layoutY="125.0" text="Admin Login" textAlignment="CENTER" textFill="#041e42">
+            <font>
+                <Font name="Segoe UI Semibold" size="20.0"/>
+            </font>
+        </Label>
+
+        <Label layoutX="510.0" layoutY="189.0" text="Admin ID" textFill="#041e42">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0"/>
+            </font>
+        </Label>
+
+        <TextField fx:id="adminID" layoutX="509.0" layoutY="223.0" prefHeight="36.0" prefWidth="300.0"
+                   promptText="Enter Your Admin ID" style="-fx-font-size: 14px;"/>
+
+        <Label layoutX="510.0" layoutY="277.0" text="Password" textFill="#041e42">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0"/>
+            </font>
+        </Label>
+        <StackPane layoutX="509.0" layoutY="312.0" prefHeight="36.0" prefWidth="300.0">
+
+            <TextField fx:id="visiblePass" managed="false" prefHeight="36.0" prefWidth="300.0"
+                       promptText="Enter your password" style="-fx-background-radius: 8;" visible="false"/>
+            <PasswordField fx:id="adminPassword" prefHeight="36.0" prefWidth="300.0" promptText="Enter your password"
+                           style="-fx-background-radius: 8;"/>
+            <Button fx:id="togglePassword" alignment="CENTER_RIGHT" onAction="#togglePasswordVisibility"
+                    prefHeight="36.0" prefWidth="36.0" styleClass="eye-button" text="👁"
+                    StackPane.alignment="CENTER_RIGHT"/>
+        </StackPane>
+
+        <Button layoutX="511.0" layoutY="367.0" mnemonicParsing="false" onAction="#adminLoginMethod" prefHeight="40.0"
+                prefWidth="300.0" styleClass="admin-btn" text="Login →"/>
+        <Line endX="189.0" endY="0" layoutX="631.0" layoutY="428.0" startX="-161.0" startY="0" stroke="#7393b3"
+              strokeWidth="0.5"/>
+
+        <Button layoutX="511.0" layoutY="451.0" mnemonicParsing="false" onAction="#callUserLogin" prefHeight="40.0"
+                prefWidth="300.0" styleClass="usr-btn" text="User Login →"/>
+
+
+    </children>
+</AnchorPane>

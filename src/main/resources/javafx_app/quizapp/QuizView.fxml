@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+<SplitPane xmlns:fx="http://javafx.com/fxml/1" fx:id="splitpaneview" dividerPositions="0.7" prefHeight="520.0"
+           prefWidth="800.0" stylesheets="@css/QuizView.css" xmlns="http://javafx.com/javafx/24"
+           fx:controller="javafx_app.quizapp.QuizViewController">
+
+    <items>
+
+        <!-- Left side: main quiz layout -->
+        <BorderPane styleClass="quiz-view">
+
+            <!-- Top: Quiz title and timer -->
+            <top>
+                <HBox alignment="CENTER_LEFT" spacing="20" styleClass="top-bar">
+                    <padding>
+                        <Insets bottom="10" left="20" right="20" top="10"/>
+                    </padding>
+                    <Label fx:id="quizTitleLabel" styleClass="title-label" text="Quiz Title"/>
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <ImageView fx:id="gifview" fitHeight="45.0" fitWidth="49.0" pickOnBounds="true"
+                               preserveRatio="true"/>
+                    <Label fx:id="timerLabel" styleClass="timer-label" text="Time Left: 00:00"/>
+                </HBox>
+            </top>
+
+            <!-- Center: Question, options, and navigation buttons -->
+            <center>
+                <VBox alignment="TOP_LEFT" spacing="20">
+                    <padding>
+                        <Insets bottom="10" left="20" right="20" top="20"/>
+                    </padding>
+
+                    <!-- Horizontal box for question number and label -->
+                    <HBox alignment="BASELINE_LEFT" spacing="10">
+                        <Label fx:id="questionNumberLabel" alignment="CENTER" prefHeight="104.0" prefWidth="48.0"
+                               styleClass="question-number-label" text="Q.1"/>
+                        <Label fx:id="questionLabel" prefHeight="106.0" prefWidth="462.0" styleClass="question-label"
+                               text="Question goes here" wrapText="true">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </Label>
+                    </HBox>
+
+                    <!-- Radio buttons wrapped in a VBox with fx:id "questionContainer" -->
+                    <VBox fx:id="questionContainer" prefHeight="162.0" prefWidth="592.0" spacing="14" translateX="10">
+                        <RadioButton fx:id="option1" onAction="#handleAnswerSelected" styleClass="option-radio"
+                                     text="Option 1"/>
+                        <RadioButton fx:id="option2" onAction="#handleAnswerSelected" styleClass="option-radio"
+                                     text="Option 2"/>
+                        <RadioButton fx:id="option3" onAction="#handleAnswerSelected" styleClass="option-radio"
+                                     text="Option 3"/>
+                        <RadioButton fx:id="option4" onAction="#handleAnswerSelected" styleClass="option-radio"
+                                     text="Option 4"/>
+                        <VBox.margin>
+                            <Insets left="45.0" top="-20.0"/>
+                        </VBox.margin>
+                    </VBox>
+
+                    <!-- Navigation buttons placed here, closer to options -->
+                    <HBox alignment="CENTER" spacing="50.0" styleClass="button-bar">
+                        <Button fx:id="prevButton" onAction="#handlePrevious" prefWidth="160.0" styleClass="nav-button"
+                                text="← Previous"/>
+                        <Button fx:id="finishButton" onAction="#finishQuiz" prefWidth="160.0" styleClass="finish-button"
+                                text="Finish Quiz" visible="false"/>
+                        <Button fx:id="nextButton" onAction="#handleNext" prefWidth="160.0" styleClass="nav-button"
+                                text="Next →"/>
+                        <VBox.margin>
+                            <Insets top="25.0"/>
+                        </VBox.margin>
+                    </HBox>
+                </VBox>
+            </center>
+
+            <!-- Bottom: Quit button -->
+            <bottom>
+                <HBox alignment="CENTER" spacing="20.0">
+                    <Button fx:id="quitButton" onAction="#handleQuit" prefWidth="160.0" styleClass="quit-button"
+                            text="🚫 Quit"/>
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                    <BorderPane.margin>
+                        <Insets bottom="40.0"/>
+                    </BorderPane.margin>
+                </HBox>
+            </bottom>
+
+        </BorderPane>
+
+        <!-- Right side: Progress with scroll and legend -->
+        <VBox alignment="TOP_CENTER" prefHeight="Infinity" spacing="10" VBox.vgrow="ALWAYS">
+            <!-- Scrollable progress circles -->
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="progress-pane" VBox.vgrow="ALWAYS">
+                <FlowPane fx:id="progressBox" alignment="TOP_CENTER" hgap="15" prefWrapLength="200.0" vgap="15">
+                    <padding>
+                        <Insets bottom="10" left="10" right="10" top="20"/>
+                    </padding>
+                </FlowPane>
+            </ScrollPane>
+
+            <!-- Legend (2 rows, bottom of right pane) -->
+            <GridPane alignment="CENTER" hgap="20" style="-fx-padding: 10;" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT"/>
+                    <ColumnConstraints halignment="LEFT"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints valignment="CENTER"/>
+                    <RowConstraints valignment="CENTER"/>
+                </rowConstraints>
+
+                <HBox alignment="CENTER_LEFT" spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Circle radius="7" style="-fx-fill: #3498db;"/>
+                    <Text text="Visited"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Circle radius="7" style="-fx-fill: #228B22;"/>
+                    <Text text="Correct"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Circle radius="7" style="-fx-fill: #C71585;"/>
+                    <Text text="Incorrect"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Circle radius="7" style="-fx-fill: #FAEBD7;"/>
+                    <Text text="Not Visited"/>
+                </HBox>
+            </GridPane>
+        </VBox>
+
+    </items>
+
+</SplitPane>

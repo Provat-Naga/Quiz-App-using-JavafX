@@ -1,0 +1,106 @@
+/* Root background and font */
+.root {
+    -fx-background-color: #f2f6fc;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+
+}
+
+/* Title label */
+.label {
+    -fx-text-fill: #1e3a8a;
+    /* Deep blue */
+}
+.led {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+/* ComboBox Styling */
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #1E90FF;
+    -fx-padding: 6px 12px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.combo-box .arrow {
+    -fx-cursor: hand;
+}
+.combo-box:hover {
+    -fx-border-color: #3b82f6;
+    -fx-cursor: hand;
+}
+
+/* TableView Styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-color: #e5e7eb;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.06), 8, 0, 0, 4);
+
+}
+
+/* Column Header Styling */
+.table-view .column-header-background {
+    -fx-background-color: #e0e7ff;
+    /* Light indigo */
+    -fx-border-color: transparent;
+    -fx-background-radius: 16px 16px 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e40af;
+    /* Medium blue */
+}
+
+/* Row Styling */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:filled:selected, .table-row-cell:filled:selected:hover {
+    -fx-background-color: #dbeafe;
+    /* Light blue */
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f3f4f6;
+    /* Light gray hover */
+}
+
+/* Scrollbar styling (optional) */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #cbd5e1;
+    -fx-background-insets: 2;
+    -fx-background-radius: 8;
+}
+.bak-btn {
+    -fx-background-color: linear-gradient(to right, #00BFFF, #1E90FF);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 30;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-border-radius: 25;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0.3, 1, 1);
+}
+.bak-btn:hover {
+    -fx-background-color: linear-gradient(to right, #1E90FF, #00BFFF);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.bak-btn:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
