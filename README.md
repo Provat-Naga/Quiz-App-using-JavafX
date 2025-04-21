@@ -28,5 +28,5 @@ Technology Used:
 
 Launch the App:
 
-To launch the app, extract the QuizApp.zip file and open it with intellij idea IDE then go to: QuizApp \ src \ main \ java \ javafx_app \ quizapp \StartApp.java
+To launch the app, open it with intellij idea IDE then go to: QuizApp \ src \ main \ java \ javafx_app \ quizapp \StartApp.java
 and run this “StartApp.java” file.
