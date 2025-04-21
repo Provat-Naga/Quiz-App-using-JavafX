@@ -1,8 +1,8 @@
 # Quiz-App-using-JavafX
 
-Project Description: 
+Project Description:-------------- 
 
-Create an Online Quiz Application in Java that allows users to take quizzes on various topics. The application should support multiple-choice questions, track user progress, and provide feedback on quiz performance.
+Create an Quiz Application in Java that allows users to take quizzes on various topics. The application should support multiple-choice questions, track user progress, and provide feedback on quiz performance.
 Design a user-friendly interface using JavaFX, Swing or any other language as per your choice for a smooth user experience.
 Ensure clarity and consistency in the layout and navigation.
 Use a database (e.g., SQLite, MySQL, etc.) to store user accounts, quizzes, questions, and quiz
@@ -11,7 +11,7 @@ Handle exceptions gracefully and provide informative error messages to users. Va
 Implement password hashing and salting to securely store user passwords.
 Implement a leaderboard to display top scorers for each quiz and rank users based on their total scores. Consider adding features such as timer-based quizzes.
 
-Technology Used:
+Technology Used:--------------------------
 
 •	Frontend: JavaFX (FXML), CSS
 •	Backend: Java (JDK SE Version 24 64bit)
@@ -26,7 +26,7 @@ Technology Used:
 • System Used: OS: Windows 10 Pro, RAM: 8GB, Processor: i5 2400 (2nd Gen) 
 
 
-Launch the App:
+Launch the App:------------------------
 
 To launch the app, open it with intellij idea IDE then go to: QuizApp \ src \ main \ java \ javafx_app \ quizapp \StartApp.java
 and run this “StartApp.java” file.
