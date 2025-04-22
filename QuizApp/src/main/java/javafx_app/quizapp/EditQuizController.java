@@ -68,7 +68,7 @@ public class EditQuizController implements Initializable {
     // Establish connection to SQLite database
     private void connectDB() {
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:quiz.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:Quiz.db");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -300,7 +300,7 @@ public class EditQuizController implements Initializable {
         if (!confirmed) return;
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("adminpanel.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminPanel.fxml"));
             Parent root = loader.load();
 
             AdminPanelController controller = loader.getController();

@@ -122,7 +122,7 @@ public class AddQuizController implements Initializable {
             return;
         }
 
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:quiz.db")) {
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:Quiz.db")) {
             // Check if the quiz already exists in the database
             PreparedStatement checkStmt = conn.prepareStatement("SELECT id, title FROM quiz WHERE title = ? COLLATE NOCASE");
             checkStmt.setString(1, quizTitle);
@@ -188,7 +188,7 @@ public class AddQuizController implements Initializable {
             return;
         }
 
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:quiz.db")) {
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:Quiz.db")) {
 
             // Insert new quiz if it doesn't exist
             if (!quizExists) {
@@ -276,7 +276,7 @@ public class AddQuizController implements Initializable {
         };
 
         // Check if question already exists in database for this quiz
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:quiz.db")) {
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:Quiz.db")) {
             String sql = "SELECT COUNT(*) AS count FROM question WHERE quiz_id = ? AND question = ? COLLATE NOCASE";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, quizId);
