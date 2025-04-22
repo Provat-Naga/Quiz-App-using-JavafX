@@ -19,9 +19,9 @@ Technology Used:--------------------------
 •	Build Tool: Maven
 •	IDE: IntelliJ IDEA community edition 2024.3.5
 •	Libraries/Frameworks:
-	  JDBC (for database connection)
-	  Control FX (For custom notification)
-	  Jbcrypt (For password hashing and salting)
+	  JDBC (for database connection),
+	  Control FX (For custom notification),
+	  Jbcrypt (For password hashing and salting),
 	  JavaFX Controls & Layouts
 • System Used: OS: Windows 10 Pro, RAM: 8GB, Processor: i5 2400 (2nd Gen) 
 
