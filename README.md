@@ -2,7 +2,7 @@
 
 Project Description:---------------------- 
 
-Create an Quiz Application in Java that allows users to take quizzes on various topics. The application should support multiple-choice questions, track user progress, and provide feedback on quiz performance.
+A Quiz Application in Java that allows users to take quizzes on various topics. The application should support multiple-choice questions, track user progress, and provide feedback on quiz performance.
 Design a user-friendly interface using JavaFX, Swing or any other language as per your choice for a smooth user experience.
 Ensure clarity and consistency in the layout and navigation.
 Use a database (SQLite) to store user accounts, quizzes, questions, and quiz
