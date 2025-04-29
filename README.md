@@ -1,26 +1,93 @@
-# Quiz-App-using-JavafX
+# 🧠 Quiz App using JavaFX
 
-Project Description:---------------------- 
+A **Java-based Quiz Application** that allows users to take quizzes across various topics. It includes user authentication, progress tracking, leaderboards, and secure data storage — all wrapped in a responsive JavaFX UI.
 
-A Quiz Application in Java that allows users to take quizzes on various topics. The application should support multiple-choice questions, track user progress, and provide feedback on quiz performance. 
-Designed a user-friendly interface using JavaFX,  for a smooth user experience. Ensure clarity and consistency in the layout and navigation. Use a database (SQLite) to store user accounts, quizzes, questions, and quiz results. Implement CRUD operations using JDBC for database interaction. Handle exceptions gracefully and provide informative error messages to users. Validate user input to prevent errors and ensure data integrity. Implement password hashing and salting to securely store user passwords. Implement a leaderboard to display top scorers for each quiz and rank users based on their total scores. Consider adding features such as timer-based quizzes.
+---
 
-Technology Used:--------------------------
+## 📋 Project Description
 
-•	Frontend: JavaFX (FXML), CSS
-•	Backend: Java (JDK SE Version 24 64bit)
-•	Database: SQLite (DB Browser)
-•	Build Tool: Maven
-•	IDE: IntelliJ IDEA community edition 2024.3.5
-•	Libraries/Frameworks:
-	  JDBC (for database connection),
-	  Control FX (For custom notification),
-	  Jbcrypt (For password hashing and salting),
-	  JavaFX Controls & Layouts
-• System Used: OS: Windows 10 Pro, RAM: 8GB, Processor: i5 2400 (2nd Gen) 
+This quiz application offers:
 
+- 📚 **Multiple-choice quizzes** on various subjects  
+- 📊 **Performance tracking** and feedback after each quiz  
+- 🔒 **User authentication** with secure password hashing (bcrypt + salt)  
+- 🧑‍💼 **User account management** using a local SQLite database  
+- 🏆 **Leaderboard** showcasing top scorers and rankings  
+- 🕒 **Timer-based quizzes** (optional/extension feature)  
+- 🎨 A clean and intuitive interface using **JavaFX + CSS**
 
-How to Launch the App:---------------------------
+Robust exception handling and input validation ensure a reliable and secure user experience.
 
-To launch the app, open it with intellij idea IDE then go to: QuizApp \ src \ main \ java \ javafx_app \ quizapp \StartApp.java
-and run this “StartApp.java” file.
+---
+
+## 🛠️ Technology Stack
+
+| Layer       | Technology                       |
+|-------------|-----------------------------------|
+| Frontend    | JavaFX (FXML), CSS                |
+| Backend     | Java (JDK SE Version 24 64bit)    |
+| Database    | SQLite (via DB Browser)           |
+| Build Tool  | Maven                             |
+| IDE         | IntelliJ IDEA (Community Edition 2024.3.5) |
+| Libraries   | JDBC, ControlFX, JBCrypt, JavaFX Controls |
+
+---
+
+## 💻 System Requirements
+
+- **OS**: Windows 10 Pro  
+- **RAM**: 8 GB  
+- **Processor**: Intel i5 2400 (2nd Gen)  
+- **Java Version**: JDK SE 24 (64-bit)  
+- **Maven Version**: Compatible with Java 24  
+- **SQLite Browser**: [DB Browser for SQLite](https://sqlitebrowser.org/)  
+
+---
+
+## 🚀 How to Launch the App
+
+1. **Clone the Repository** or download the source files.
+2. Open the project using **IntelliJ IDEA**.
+3. Navigate to the main class:
+   ```
+   QuizApp/src/main/java/javafx_app/quizapp/StartApp.java
+   ```
+4. Right-click on `StartApp.java` and choose **Run**.
+
+> ⚠️ Ensure your Maven dependencies are correctly installed and JavaFX is configured.
+
+---
+
+## 📆 Features
+
+- ✅ User login/signup
+- ✅ Password hashing with JBCrypt
+- ✅ Create/read/update/delete (CRUD) quiz questions
+- ✅ Real-time score calculation
+- ✅ Leaderboard ranking system
+- ✅ Timer-based quiz mode
+- ✅ Error handling & user input validation
+
+---
+
+## 🔐 Security
+
+- **Passwords are never stored as plain text**.
+- Uses **bcrypt hashing + salting** via the JBCrypt library.
+- Input validation and SQL protection using **prepared statements**.
+
+---
+
+## 📸 UI Screenshots *(Optional)*
+
+You can insert screenshots here to showcase:
+- Login page
+- Quiz UI
+- Score summary
+- Leaderboard
+
+---
+
+## 👥 Authors
+
+- Your Name – [GitHub Profile](https://github.com/Provat-Naga)  
